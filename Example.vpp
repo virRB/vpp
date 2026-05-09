@@ -1,0 +1,61 @@
+$:An example program
+
+main_win:root, 100x200+100+100
+$:Creates a window named root with the above dimensions and coordinates
+
+text:newLabel, Hi!
+append:newLabel
+$:Creates a text newLabel with the text "Hi!"
+
+int:num=1
+$:creates a number variable named num with a value of 1
+
+str:txt=HelloWorld
+$:Creates a text variable named txt with a value of HelloWorld (Note: since it is a string variable it cannot be edited later in code for now - editing in code is only supported for int variables)
+
+func:Hi
+$:Starts a function named Hi
+
+configurate:newLabel, HelloWorld
+$:Changes the text in our "newLabel" to HelloWorld
+
+endfunc:
+$:Ends the function
+
+button:btn1, ClickMe, Hi
+append:btn1
+$:Creates a button named btn1 with the text ClickMe, that calls our function "Hi" when clicked
+
+func:Bye
+
+globalify:num
+$:Makes the variable num global so that this statement can edit its value
+
+if:num==1
+$:Checks if our variable num is equal to 1
+
+adjust:num+=1
+$:Edits the value of our variable num to increase by 1
+
+msg:str;ThisIsAMessage
+$:Sends a fixed Message
+
+msg:var;txt
+$:Sends a message with the value of the variable txt
+
+mouse:500, 500
+$:Should move your mouse to the coordinates x=500, y=500
+
+click:500, 500
+$:Should click in the same spot
+
+endif:
+$:Ends the if statements
+
+endfunc:
+
+button:btn2, ClickMeAsWell, Bye
+append:btn2
+
+end:root
+$:If you are using a window make sure to put this at the end of your code

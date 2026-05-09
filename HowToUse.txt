@@ -1,0 +1,151 @@
+How To write vpp
+
+>> How to run vpp:
+> First, run vpp.py
+> Ensure it is in the same folder as runitme.py
+> When the script runs, you will be provided with 2 windows.
+> You have 2 options here - you can either
+> a) write vpp directly in the text-box and press enter after every line
+> b) upload a .vpp file with the content inside by pressing the upload button (Reccomended)
+> Once you have written your script, press "Run" and wait for a few seconds. the script should automatically load.
+> If it does not, make sure your installation of python has administrator permissions.
+
+>> How to write in vpp:
+> After you have learnt how to run your code, you can learn how to actually write it!
+> If you still do not understand some parts, I have provided an example vpp file.
+
+Syntax Rules
+
+All commands follow this format:
+
+command:arguments
+
+Multiple commands can be written on one line using:
+
+;
+
+Example:
+int:x=5; adjust:x+=2
+
+Some commands use:
+
+, for multiple parameters
++=, -=, = for variable changes
+== for comparisons
+Variables
+
+VPP supports two variable types:
+
+Integer:
+int:name=value
+
+String:
+str:name=value
+
+Example:
+int:num=10
+str:text=Hello
+
+Limitations
+Variables are global
+Variable names must be unique
+Strings cannot be modified using adjust
+No local variables or scopes
+Editing Variables
+
+Only integer variables can be edited:
+
+adjust:name+=value
+adjust:name-=value
+adjust:name=value
+
+Example:
+adjust:num+=5
+
+If Statements
+
+if:variable==value
+
+Example:
+if:num==10
+
+Rules:
+
+No nested if statements allowed
+If statements can be used inside functions
+Must be closed with:
+
+endif:
+
+Functions
+
+Create a function:
+func:name
+
+End a function:
+endfunc:
+
+Call a function:
+call:name
+
+Limitations:
+
+No parameters
+No nested functions
+Functions cannot be stored as values
+Must be defined before calling
+Mouse Commands
+
+mouse:x,y → moves the mouse to position
+click:x,y → clicks at position
+
+Timing
+
+wait:seconds
+
+Output
+
+print_var:variable → prints a variable
+print_str:text → prints text directly
+
+Messages
+
+msg:type;value
+
+Types:
+
+str → displays text
+var → displays variable value
+
+Example:
+msg:str;Hello
+msg:var;num
+
+Global Variables
+
+globalify:variable_name
+
+UI Basics
+
+main_win:name, size, position → creates main window
+text:name, content → creates text label
+configurate:name, new text → updates text
+button:name, text, function → creates button
+end:window → closes the window
+append:name  → appends a variable to the window
+
+Comments
+
+Comments are ignored by the VPP parser and do not affect program execution.
+
+Syntax:
+$:comment
+
+Example:
+$:This is a comment
+
+Known Limitations
+No nested if statements
+No function parameters
+Strings cannot be modified using adjust
+No local scope system
