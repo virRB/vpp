@@ -1,5 +1,6 @@
 # vpp
 A small indie language I built that runs on Python.
+This does require python to be installed on the system.
 
 VPP is a small language that runs locally on your device.
 It includes automation tools such as mouse movement and click control, so it is advised not to run untrusted .vpp files.
